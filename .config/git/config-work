@@ -1,0 +1,5 @@
+[user]
+    name = Louis
+    email = bon.l@sfeir.com
+[core]
+    sshCommand = ssh -i ~/.ssh/key_pro -o IdentitiesOnly=yes
