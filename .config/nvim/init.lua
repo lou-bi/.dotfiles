@@ -5,7 +5,7 @@ vim.g.maplocalleader = ' '
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-    local lazyrepo = vim.fn.system {
+    vim.fn.system {
         'git',
         'clone',
         '--filter=blob:none',
@@ -20,7 +20,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup {
     spec = { { import = 'plugins' } },
     rocks = { enabled = true },
-    -- install = { colorscheme = { "habamax"} },
     checker = { enabled = true },
 }
 
